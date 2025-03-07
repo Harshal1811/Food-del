@@ -17,9 +17,9 @@ const addToCart = async (req, res) => {
       console.log(error);
       res.json({ success: false, message: "Error" })
    }
-}
+} 
 
-// remove food from user cart
+
 const removeFromCart = async (req, res) => {
    try {
       let userData = await userModel.findById(req.body.userId);
@@ -36,7 +36,6 @@ const removeFromCart = async (req, res) => {
 
 }
 
-// get user cart
 const getCart = async (req, res) => {
    try {
       let userData = await userModel.findById(req.body.userId);
